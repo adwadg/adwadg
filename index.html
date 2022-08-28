@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>IG</title>
+    <style>@import url(main.css);</style>
+    <script src="jquery.min.js"></script>
+    <script type="text/javascript">  
+        function disptime(){  
+            var today=new Date();  
+            var hh=today.getHours();  
+            var mm=today.getMinutes();  
+            var ss = today.getSeconds();  
+            if(mm<10){  
+                mm='0'+mm;  
+            }
+            if (ss < 10) {
+                ss = '0' + ss;
+            }
+            document.getElementById("title").innerHTML=hh+":"+mm+":"+ss+"</h1>" ;
+        }   
+        var mytime = setInterval("disptime()",1000);  
+    </script>  
+</head>
+<body> 
+    <h1 id="title">adwadg</h1>
+    <nav>
+        <ul>
+            <li><a href="https://www.luogu.com.cn">luogu</a></li>
+            <li><a href="https://www.github.com">github</a></li>
+            <li><a href="https://www.bilibili.com">bilibili</a></li>
+            <li><a href="https://www.baidu.com">baidu</a></li>
+            <li><a href="https://www.bing.com">bing</a></li>
+        </ul>
+    </nav>
+    <br><br><br><br><br>
+    <form  id="fom" target="_blank" align="center" method="get" action="https://cn.bing.com/search?">
+        <input placeholder="Search for...." id="inp" name="q">
+        <button type="submit" id="sub" name="go">搜索</button>
+    </form>
+    <p id="footer">Made by adwadg VER1.1&nbsp;<a href="https://www.luogu.com.cn/blog/adwadg/">myBlog</a></p>
+</body>
